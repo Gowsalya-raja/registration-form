@@ -1,0 +1,92 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration Form</title>
+
+    <style>
+        .container {
+            width: 350px;
+            margin: 100px auto;
+            padding: 45px;
+            background-color: white;
+            border-radius: 10px;
+            box-shadow: 10px 5px 10px 5px grey;
+        }
+
+        h1 {
+            text-align: center;
+        }
+
+        input {
+            box-sizing: border-box;
+            width: 100%;
+            padding: 10px;
+            margin-top: 10px;
+            margin-bottom: 10px;
+            border: 1px solid grey;
+            border-radius: 10px;
+        }
+
+        button {
+            width: 100%;
+            padding: 10px;
+            margin-top: 20px;
+            border: none;
+            border-radius: 5px;
+            background-color: green;
+            color: white;
+            font-size: 16px;
+            cursor: pointer;
+        }
+
+        button:disabled {
+            background-color: grey;
+            cursor: not-allowed;
+        }
+
+        .error {
+            color: red;
+            font-size: 14px;
+        }
+
+        #successMessage {
+            color: green;
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="container">
+
+        <h1>Registration Form</h1>
+
+        <h2>Name</h2>
+        <input type="text" placeholder="Enter your name" id="nameInput">
+        <div class="error" id="nameError"></div>
+
+        <h2>Email</h2>
+        <input type="email" placeholder="Enter your email" id="emailInput">
+        <div class="error" id="emailError"></div>
+
+        <h2>Password</h2>
+        <input type="password" placeholder="Enter your password" id="passwordInput">
+        <div class="error" id="passwordError"></div>
+
+        <button id="submitBtn" onclick="submitUser()" disabled>
+            Submit
+        </button>
+
+        <p id="successMessage"></p>
+
+    </div>
+
+    <script src="script.js"></script>
+
+</body>
+</html>
